@@ -1,0 +1,30 @@
+{
+    "name": "flarum/phpstan",
+    "description": "Flarum PHPStan extension",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "require": {
+        "phpstan/phpstan-php-parser": "^1.0",
+        "phpstan/phpstan": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flarum\\PHPStan\\": "src/"
+        }
+    },
+    "extra": {
+        "phpstan": {
+            "includes": [
+                "extension.neon"
+            ]
+        },
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    },
+    "repositories": [{
+            "type": "path",
+            "url": "../../*/*"
+        }],
+    "prefer-stable": true
+}
